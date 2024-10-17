@@ -1,0 +1,56 @@
+.about {
+    @include section;
+    hr{
+        @include hr
+    }
+    .about-container {
+        @include container;
+        @include grid-col-3;
+        .about-items{
+            img{
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 0 0 25px #ff00ff;
+            }
+            p{
+                font-size: 2.2rem;
+            }
+            .years{
+                @include grid-col-3-row;
+                padding: 2rem 0;
+                .year{
+                    display: flex;
+                    align-items:center;
+                    gap: 2rem;
+                    background-color: $bgcolor;
+                    padding: 1rem;
+                    border-radius: 15px;
+                    &:hover{
+                    background-color: $mainColor;
+                    transition: 0.4s ease-in-out; 
+                    cursor: pointer;  
+                 }
+                    h1{
+                        font-size: 3rem;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            button{
+                padding: 0.8rem 2rem;
+                border-radius: 20px;
+                background-color: $mainColor;
+                font-size: 1.2rem;
+                color: white;
+                cursor: pointer;
+                &:hover{
+                    background-color: $bgcolor;
+                    border: 2px solid white;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.hero {
+    @include section;
+
+    .hero-container {
+        @include grid-col-2;
+
+        .hero-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            
+
+            h1 {
+                font-size: 4rem;
+                color: $mainColor;
+            }
+
+            p {
+                font-size: 1.5rem;
+
+                &:nth-of-type(1) {
+                    font-size: 2rem;
+                }
+            }
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+                box-shadow: 0 0 25px #ff00ff;
+            }
+
+            .icon {
+                display: flex;
+                gap: 2rem;
+
+                i {
+                    padding: 1rem;
+                    border-radius: 50%;
+                    background-color: $mainColor;
+                    color: $bgcolor;
+                    font-size: 1.5rem;
+
+                    &:hover {
+                        background-color: $primarycolor;
+                        transition: 1s ease-in-out;
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .btn-group{
+                display: flex;
+                gap: 2rem;
+                a{
+                    color: $mainColor;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    padding: 0.5rem 2rem;
+                    border-radius: 15px;
+                    border: 2px solid $textcolor;
+                    &:nth-of-type(1){
+                        background-color: $bgcolor;
+                        color: $textcolor;
+                        &:hover{
+                            background-color: $secondbgcolor;
+                            color: $mainColor;
+                        }
+                    }
+                    &:nth-of-type(2){
+                        &:hover{
+                            background-color: $mainColor;
+                            color: $bgcolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

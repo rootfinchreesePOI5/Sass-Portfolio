@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+$bgcolor: black;
+$secondbgcolor: rgb(18, 18, 18);
+$textcolor: white;
+$primarycolor: white;
+$mainColor: #ff00ff;
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+}
+
+@mixin section {
+    padding: 10rem 12% 5rem;
+    min-height: fit-content;
+    background-color: $secondbgcolor;
+}
+
+@mixin header {
+    padding: 1rem 2rem;
+    background-color: $bgcolor;
+    position: fixed;
+    width: 100%;
+}
+@mixin container{
+    padding: 5rem 0 2rem;
+}
+
+@mixin hr {
+    width: 10%;
+    height: 5px;
+    border: none;
+    background-color: $mainColor;
+}
+
+@mixin link-text {
+    font-size: 1.2rem;
+    color: $textcolor;
+}
+
+@mixin heading {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+@mixin grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+@mixin grid-col-3{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+}
+@mixin grid-col-3-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+@mixin size {
+    padding: 1rem 2rem;
+    background-color: $mainColor;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: $textcolor
+}
+
+.heading {
+    @include heading;
+    color: $textcolor;
+}
+
+section {
+    @include section;
+}
+
+@import 'navbar';
+@import 'hero';
+@import 'about'

@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Outfit";
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.heading {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+}
+
+section {
+  padding: 10rem 12% 5rem;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: rgb(18, 18, 18);
+}
+
+header {
+  padding: 1rem 2rem;
+  background-color: black;
+  position: fixed;
+  width: 100%;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  color: white;
+}
+header .navbar .logo {
+  color: #ff00ff;
+  font-size: 2rem;
+}
+header .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  cursor: pointer;
+}
+header .navbar ul a {
+  color: white;
+  text-decoration: none;
+}
+header .navbar ul a:hover {
+  color: #ff00ff;
+}
+header .navbar button {
+  padding: 1rem 2rem;
+  background-color: #ff00ff;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: white;
+}
+header .navbar button:hover {
+  transition: 0.2s ease-in-out;
+  background-color: black;
+  color: white;
+  border: 2px solid;
+}
+
+.hero {
+  padding: 10rem 12% 5rem;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: rgb(18, 18, 18);
+}
+.hero .hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.hero .hero-container .hero-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero .hero-container .hero-items h1 {
+  font-size: 4rem;
+  color: #ff00ff;
+}
+.hero .hero-container .hero-items p {
+  font-size: 1.5rem;
+}
+.hero .hero-container .hero-items p:nth-of-type(1) {
+  font-size: 2rem;
+}
+.hero .hero-container .hero-items img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #ff00ff;
+}
+.hero .hero-container .hero-items .icon {
+  display: flex;
+  gap: 2rem;
+}
+.hero .hero-container .hero-items .icon i {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #ff00ff;
+  color: black;
+  font-size: 1.5rem;
+}
+.hero .hero-container .hero-items .icon i:hover {
+  background-color: white;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.hero .hero-container .hero-items .btn-group {
+  display: flex;
+  gap: 2rem;
+}
+.hero .hero-container .hero-items .btn-group a {
+  color: #ff00ff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+.hero .hero-container .hero-items .btn-group a:nth-of-type(1) {
+  background-color: black;
+  color: white;
+}
+.hero .hero-container .hero-items .btn-group a:nth-of-type(1):hover {
+  background-color: rgb(18, 18, 18);
+  color: #ff00ff;
+}
+.hero .hero-container .hero-items .btn-group a:nth-of-type(2):hover {
+  background-color: #ff00ff;
+  color: black;
+}
+
+.about {
+  padding: 10rem 12% 5rem;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: rgb(18, 18, 18);
+}
+.about hr {
+  width: 10%;
+  height: 5px;
+  border: none;
+  background-color: #ff00ff;
+}
+.about .about-container {
+  padding: 5rem 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5rem;
+}
+.about .about-container .about-items img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #ff00ff;
+}
+.about .about-container .about-items p {
+  font-size: 2.2rem;
+}
+.about .about-container .about-items .years {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding: 2rem 0;
+}
+.about .about-container .about-items .years .year {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.about .about-container .about-items .years .year:hover {
+  background-color: #ff00ff;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.about .about-container .about-items .years .year h1 {
+  font-size: 3rem;
+}
+.about .about-container .about-items .years .year p {
+  font-size: 1.5rem;
+}
+.about .about-container .about-items button {
+  padding: 0.8rem 2rem;
+  border-radius: 20px;
+  background-color: #ff00ff;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+.about .about-container .about-items button:hover {
+  background-color: black;
+  border: 2px solid white;
+  transition: 0.2s ease-in-out;
+}/*# sourceMappingURL=styles.css.map */

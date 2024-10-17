@@ -1,0 +1,39 @@
+header {
+    @include header;
+
+    .navbar {
+        @include flex;
+        color: $textcolor;
+
+        .logo {
+            color: $mainColor;
+            font-size: 2rem;
+        }
+
+        ul {
+            @include flex;
+
+            a {
+                color: $textcolor;
+                text-decoration: none;
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+
+            cursor: pointer
+        }
+
+        button {
+            @include size;
+
+            &:hover {
+                transition: 0.2s ease-in-out;
+                background-color: darken($bgcolor, $amount: 50%);
+                color: $textcolor;
+                border: 2px solid;
+            }
+        }
+    }
+}
