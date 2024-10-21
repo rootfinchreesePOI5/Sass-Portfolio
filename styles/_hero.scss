@@ -34,17 +34,10 @@
                 gap: 2rem;
 
                 i {
-                    padding: 1rem;
-                    border-radius: 50%;
-                    background-color: $mainColor;
-                    color: $bgcolor;
-                    font-size: 1.5rem;
+                    @include icon_i;
 
                     &:hover {
-                        background-color: $primarycolor;
-                        transition: 1s ease-in-out;
-                        cursor: pointer;
-                        transform: scale(1.1);
+                        @include hover_i;
                     }
                 }
             }
@@ -52,12 +45,7 @@
                 display: flex;
                 gap: 2rem;
                 a{
-                    color: $mainColor;
-                    text-decoration: none;
-                    font-size: 1.5rem;
-                    padding: 0.5rem 2rem;
-                    border-radius: 15px;
-                    border: 2px solid $textcolor;
+                    @include  btn_group_link;
                     &:nth-of-type(1){
                         background-color: $bgcolor;
                         color: $textcolor;
@@ -77,5 +65,7 @@
         }
     }
 }
+
+
 
 

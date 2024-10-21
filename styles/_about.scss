@@ -16,7 +16,7 @@
                 font-size: 2.2rem;
             }
             .years{
-                @include grid-col-3-row;
+                @include grid-col-3-about;
                 padding: 2rem 0;
                 .year{
                     display: flex;

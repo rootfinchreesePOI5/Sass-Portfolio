@@ -1,0 +1,80 @@
+.contact {
+    @include section;
+
+    .heading {
+        hr {
+            @include hr;
+        }
+    }
+
+    .contact-container {
+        @include container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+
+        .contact-items {
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+
+                input {
+                    @include input_field;
+                }
+
+                label {
+                    font-size: 1.2rem;
+                    color: $mainColor;
+                }
+
+                textarea {
+                    @include textarea;
+                }
+
+                .top-form {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 2rem;
+
+                    .left {
+                        @include input_style;
+                        background-color: lighten($bgcolor , $amount: 10);
+                        border-radius: 15px;
+                    }
+
+                    .right {
+                        @include input_style;
+                        background-color: lighten($bgcolor , $amount: 10);
+                        border-radius: 15px;
+                    }
+                }
+
+                .bottom-form {
+                    @include input_style;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: lighten($bgcolor , $amount: 10);
+                    border-radius: 15px;
+                }
+
+                .btn {
+                    padding: 0.5rem 2rem;
+                    background-color: $mainColor;
+                    color: $textcolor;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $bgcolor;
+                        border: 1px solid $primarycolor;
+                    }
+                }
+            }
+        }
+    }
+}

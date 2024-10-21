@@ -1,0 +1,35 @@
+.education {
+    @include section;
+
+    .heading {
+        hr {
+            @include hr
+        }
+
+    }
+
+    .education-container {
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+
+        .timeline {
+            @include timeline;
+
+            h1 {
+                font-size: 2rem;
+                color: $bgcolor;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            &:nth-of-type(even) {
+                margin-left: 50%;
+            }
+        }
+    }
+}

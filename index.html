@@ -8,31 +8,30 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://kit.fontawesome.com/16edaccdd1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <a href="#home" class="logo">Abdiaziz
+        <span>mohamed</span></a>
+
+        
         <nav class="navbar">
-            <h1 class="logo">Abdiaziz</h1>
-            <ul class="links">
-                <a href="#">
-                    <li>Home</li>
-                </a>
-                <a href="#about">
-                    <li>About</li>
-                </a>
-                <a href="#services">
-                    <li>Services</li>
-                </a>
-                <a href="">
-                    <li>Contact</li>
-                </a>
+            <ul>
+                <a href="#" class="active">Home</a>
+                <a href="#education">Education</a>
+                <a href="#about">About</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                    <button class="btn">
+                        Sign in
+                    </button>
             </ul>
-            <button class="btn">
-                Sign in
-            </button>
-        </nav>
-    </header>
+            
+        </nav>  
+        <i class='bx bx-menu' id="menu-icon"></i>
+</header>
 
     <section class="hero" id="home">
         <hero class="hero-container">
@@ -73,26 +72,164 @@
                     and building, lso I am good at
                     wordpress. I love to talk with you about
                     our unique</p>
-                    <div class="years">
-                        <div class="year">
-                            <h1>12+</h1>
-                            <p>Years of experience</p>
-                        </div>
-                        <div class="year">
-                            <h1>1K+</h1>
-                            <p>Successful Projects</p>
-                        </div>
-                        <div class="year">
-                            <h1>20+</h1>
-                            <p>Honors and Awards</p>
-                        </div>
+                <div class="years">
+                    <div class="year">
+                        <h1>12+</h1>
+                        <p>Years of experience</p>
                     </div>
-                    <div class="cv">
-                        <a href=""><button>Download Cv</button></a>
+                    <div class="year">
+                        <h1>1K+</h1>
+                        <p>Successful Projects</p>
                     </div>
+                    <div class="year">
+                        <h1>20+</h1>
+                        <p>Honors and Awards</p>
+                    </div>
+                </div>
+                <div class="cv">
+                    <a href=""><button>Download Cv</button></a>
+                </div>
             </div>
         </hero>
     </section>
+
+    <section id="education" class="education">
+        <h1 class="heading">
+            Education
+            <hr>
+        </h1>
+        <div class="education-container">
+            <div class="timeline">
+                <h1>2016</h1>
+                <h2>Primary school</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti dolorum molestiae iusto
+                    beatae facere consequuntur laboriosam eveniet non, ducimus, libero incidunt, voluptatum corrupti
+                    enim.</p>
+            </div>
+            <div class="timeline">
+                <h1>2020</h1>
+                <h2>High school</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti dolorum molestiae iusto
+                    beatae facere consequuntur laboriosam eveniet non, ducimus, libero incidunt, voluptatum corrupti
+                    enim.</p>
+            </div>
+            <div class="timeline">
+                <h1>2022</h1>
+                <h2>Colledge</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti dolorum molestiae iusto
+                    beatae facere consequuntur laboriosam eveniet non, ducimus, libero incidunt, voluptatum corrupti
+                    enim.</p>
+            </div>
+            <div class="timeline">
+                <h1>2024</h1>
+                <h2>University</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam deleniti dolorum molestiae iusto
+                    beatae facere consequuntur laboriosam eveniet non, ducimus, libero incidunt, voluptatum corrupti
+                    enim.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h1 class="heading">
+            Testimonials
+            <hr>
+        </h1>
+        <div class="testimonials-container">
+            <div class="testimonials-list">
+                <div class="img-testimonials">
+                    <img src="images/manager.jpg" alt="">
+                </div>
+                <h1>Secretary</h1>
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p>"Working with abdiaziz was an exceptional experience. Their attention to detail and dedication to
+                    delivering high-quality work exceeded our expectations."</p>
+            </div>
+            <div class="testimonials-list">
+                <div class="img-testimonials">
+                    <img src="images/yussuf.jpeg" alt="">
+                </div>
+                <h1>Yussuf</h1>
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p>"Working with abdiaziz was an exceptional experience. Their attention to detail and dedication to
+                    delivering high-quality work exceeded our expectations."</p>
+            </div>
+            <div class="testimonials-list">
+                <div class="img-testimonials">
+                    <img src="images/matrix.jpg" alt="">
+                </div>
+                <h1>Manager</h1>
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p>"Working with abdiaziz was an exceptional experience. Their attention to detail and dedication to
+                    delivering high-quality work exceeded our expectations."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading">
+            Contact-Me
+            <hr>
+        </h1>
+        <div class="contact-container">
+            <div class="contact-items">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form ">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="e9909238-8860-4ddd-82f6-f1722546689a">
+
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <div class="top-form">
+                        <div class="left">
+                            <label>Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="right">
+                            <label>Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="bottom-form">
+                        <label for="">Your message</label>
+                        <textarea name="message" rows="12" required></textarea>
+                    </div>
+
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                    <button type="submit" class="btn">Submit Form</button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="icon">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="copy">
+                Copyright &copy; designed by<span>Abdiaziz mohamed </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

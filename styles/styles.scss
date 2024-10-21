@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
 $bgcolor: black;
-$secondbgcolor: rgb(18, 18, 18);
+$secondbgcolor: rgba(18, 18, 18, 0.377);
 $textcolor: white;
 $primarycolor: white;
 $mainColor: #ff00ff;
@@ -24,13 +24,53 @@ body {
     background-color: $secondbgcolor;
 }
 
+@mixin icon_i {
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: $mainColor;
+    color: $bgcolor;
+    font-size: 1.5rem;
+}
+
+@mixin btn_group_link {
+    color: $mainColor;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    border: 2px solid $textcolor;
+}
+
+@mixin timeline {
+    background-color: $mainColor;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 50%;
+}
+
+@mixin hover_i {
+    background-color: $primarycolor;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 @mixin header {
     padding: 1rem 2rem;
     background-color: $bgcolor;
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
 }
-@mixin container{
+
+@mixin nav_btn {
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    background-color: $mainColor;
+    border: none;
+}
+
+@mixin container {
     padding: 5rem 0 2rem;
 }
 
@@ -53,6 +93,13 @@ body {
     justify-content: center;
     gap: 2rem;
 }
+@mixin responsive-heading{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
 
 @mixin flex {
     display: flex;
@@ -69,16 +116,25 @@ body {
     justify-content: center;
     gap: 5rem;
 }
-@mixin grid-col-3{
+
+@mixin grid-col-3 {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 5rem;
 }
-@mixin grid-col-3-row{
+
+@mixin grid-col-3-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+}
+
+@mixin grid-col-3-about {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2.5rem;
 }
+
 @mixin size {
     padding: 1rem 2rem;
     background-color: $mainColor;
@@ -97,6 +153,196 @@ section {
     @include section;
 }
 
+@mixin testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    background-color: $bgcolor;
+    border-radius: 25px;
+    text-align: center;
+}
+
+@mixin testimonials_images {
+    width: 70%;
+    border-radius: 50%;
+
+}
+
+@mixin input_style {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+@mixin input_field {
+    width: 400px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $mainColor;
+    color: white;
+    font-size: 1rem;
+    padding-left: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin textarea {
+    background-color: transparent;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $mainColor;
+    color: white;
+    font-size: 1rem;
+    padding: 2rem 20px 0 0;
+    outline: none;
+    cursor: pointer;
+    width: 600px;
+}
+
 @import 'navbar';
 @import 'hero';
-@import 'about'
+@import 'about';
+@import 'education';
+@import 'testimonial';
+@import 'contact';
+@import 'footer';
+
+@media (max-width:764px) {
+    .header {
+        padding: 1rem 5%;
+        #menu-icon {
+            display: block;
+        }
+        .logo{
+            font-size: 1.5rem;
+        }
+        .navbar {
+            position: fixed;
+            top: 100%;
+            right: 0;
+            width: 50%;
+            padding: 1rem 4%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom-left-radius: 2rem;
+            border-left: 2px solid $mainColor;
+            border-bottom: 2px solid $mainColor;
+            display: none;
+            ul {
+                a {
+                    display: block;
+                    font-size: 1rem;
+                    margin: 3rem 0;
+                    color: white;
+                    .active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {    
+        .hero-container {
+            display: flex;
+            flex-direction: column-reverse;    
+        }
+    }
+//about
+    .about {
+        @include section;
+        hr{
+            display: none
+        }
+        .about-container {
+            display: flex;
+            flex-direction: column-reverse;
+            .about-items{
+                img{
+                    width: 100%;
+                    border-radius: 20px;
+                    box-shadow: 0 0 25px #ff00ff;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+                .years{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    padding: 2rem 0;
+                    .year{
+                        h1{
+                            font-size: 1.5rem;
+                        }
+                        p{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    //education
+    .education {
+        @include section;
+    
+        .heading {
+            hr{
+                display: none
+            }
+    
+        }
+    }
+
+    //testimonials
+    .testimonials {
+        position: relative;
+        hr{
+            display: none;
+        }
+    
+        @include section;
+    
+        .testimonials-container {
+            @include container;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    
+
+    //contact
+    .contact {
+        @include section;
+    
+        .heading {
+            hr {
+                display: none
+            }
+        }
+    
+        .contact-container { 
+            .contact-items {
+                .contact-form {
+                       textarea {
+                        width: 400px;
+                    }
+    
+                    .top-form {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                }
+            }
+        }
+    }
+}
