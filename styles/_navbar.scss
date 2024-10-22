@@ -6,6 +6,7 @@
     padding: 2rem 8%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
+    box-shadow: 0 0 1000px 0 $mainColor;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,18 +63,20 @@
 
                 .active {
                     display: block;
+
                     &:hover {
                         color: $mainColor;
                         border-bottom: 6px solid $mainColor;
                     }
                 }
             }
+
             cursor: pointer;
         }
 
         // When navbar is hidden (mobile)
         &.hidden {
-            display: none;  // Hide on small screens by default
+            display: none; // Hide on small screens by default
         }
 
         // When navbar is visible
@@ -85,6 +88,7 @@
     button {
         @include nav_btn;
         margin-left: 3rem;
+
         &:hover {
             transition: 0.2s ease-in-out;
             background-color: darken($textcolor, 50%);

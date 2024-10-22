@@ -93,7 +93,8 @@ body {
     justify-content: center;
     gap: 2rem;
 }
-@mixin responsive-heading{
+
+@mixin responsive-heading {
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -214,12 +215,15 @@ section {
 @media (max-width:764px) {
     .header {
         padding: 1rem 5%;
+
         #menu-icon {
             display: block;
         }
-        .logo{
+
+        .logo {
             font-size: 1.5rem;
         }
+
         .navbar {
             position: fixed;
             top: 100%;
@@ -232,12 +236,14 @@ section {
             border-left: 2px solid $mainColor;
             border-bottom: 2px solid $mainColor;
             display: none;
+
             ul {
                 a {
                     display: block;
                     font-size: 1rem;
                     margin: 3rem 0;
                     color: white;
+
                     .active {
                         display: block;
                     }
@@ -246,40 +252,47 @@ section {
         }
     }
 
-    .hero {    
+    .hero {
         .hero-container {
             display: flex;
-            flex-direction: column-reverse;    
+            flex-direction: column-reverse;
         }
     }
-//about
+
+    //about
     .about {
         @include section;
-        hr{
-            display: none
+        .heading {
+            font-size: 2.5rem;
         }
+
         .about-container {
             display: flex;
             flex-direction: column-reverse;
-            .about-items{
-                img{
+
+            .about-items {
+                img {
                     width: 100%;
                     border-radius: 20px;
                     box-shadow: 0 0 25px #ff00ff;
                 }
-                p{
+
+                p {
                     font-size: 1.5rem;
                 }
-                .years{
+
+                .years {
                     display: flex;
                     flex-direction: column;
                     gap: 2rem;
                     padding: 2rem 0;
-                    .year{
-                        h1{
+
+                    .year {
+                        h1 {
                             font-size: 1.5rem;
                         }
-                        p{
+
+                        p {
                             font-size: 1.5rem;
                         }
                     }
@@ -287,54 +300,75 @@ section {
             }
         }
     }
-    
-    
+
+
     //education
     .education {
         @include section;
-    
+
         .heading {
-            hr{
-                display: none
-            }
+            font-size: 2.5rem;
+        }
+        .education-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5rem;
     
+            .timeline {
+                @include timeline;
+                width: 100%;
+                margin: 0;
+                h1 {
+                    font-size: 2rem;
+                    color: $bgcolor;
+                    margin-bottom: 20px;
+                }
+    
+                p {
+                    font-size: 0.8rem;
+                }
+                &:nth-of-type(even){
+                    margin: 0;
+                }
+            }
         }
     }
 
     //testimonials
     .testimonials {
         position: relative;
-        hr{
-            display: none;
+        .heading {
+            font-size: 2.5rem;
         }
-    
+
         @include section;
-    
+
         .testimonials-container {
             @include container;
             display: grid;
             grid-template-columns: 1fr;
         }
     }
-    
+
 
     //contact
     .contact {
         @include section;
-    
+
         .heading {
-            hr {
-                display: none
-            }
+            font-size: 2.5rem;
         }
-    
-        .contact-container { 
+
+        .contact-container {
             .contact-items {
                 .contact-form {
-                       textarea {
-                        width: 400px;
+                    input{
+                        width: 320px;
                     }
-    
+                    textarea {
+                        width: 320px;
+                    }
+
                     .top-form {
                         display: flex;
                         flex-direction: column;

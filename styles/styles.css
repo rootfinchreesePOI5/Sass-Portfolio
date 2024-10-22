@@ -37,6 +37,7 @@ section {
   background: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  box-shadow: 0 0 1000px 0 #ff00ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -451,7 +452,7 @@ section {
 }
 .footer .icon {
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   padding: 1rem;
 }
 .footer .icon i {
@@ -517,8 +518,8 @@ section {
     min-height: fit-content;
     background-color: rgba(18, 18, 18, 0.377);
   }
-  .about hr {
-    display: none;
+  .about .heading {
+    font-size: 2.5rem;
   }
   .about .about-container {
     display: flex;
@@ -550,8 +551,32 @@ section {
     min-height: fit-content;
     background-color: rgba(18, 18, 18, 0.377);
   }
-  .education .heading hr {
-    display: none;
+  .education .heading {
+    font-size: 2.5rem;
+  }
+  .education .education-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  .education .education-container .timeline {
+    background-color: #ff00ff;
+    padding: 1rem;
+    border-radius: 20px;
+    width: 50%;
+    width: 100%;
+    margin: 0;
+  }
+  .education .education-container .timeline h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .education .education-container .timeline p {
+    font-size: 0.8rem;
+  }
+  .education .education-container .timeline:nth-of-type(even) {
+    margin: 0;
   }
   .testimonials {
     position: relative;
@@ -560,8 +585,8 @@ section {
     min-height: fit-content;
     background-color: rgba(18, 18, 18, 0.377);
   }
-  .testimonials hr {
-    display: none;
+  .testimonials .heading {
+    font-size: 2.5rem;
   }
   .testimonials .testimonials-container {
     padding: 5rem 0 2rem;
@@ -574,11 +599,14 @@ section {
     min-height: fit-content;
     background-color: rgba(18, 18, 18, 0.377);
   }
-  .contact .heading hr {
-    display: none;
+  .contact .heading {
+    font-size: 2.5rem;
+  }
+  .contact .contact-container .contact-items .contact-form input {
+    width: 320px;
   }
   .contact .contact-container .contact-items .contact-form textarea {
-    width: 400px;
+    width: 320px;
   }
   .contact .contact-container .contact-items .contact-form .top-form {
     display: flex;
